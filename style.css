@@ -1,0 +1,129 @@
+:root{
+    --gold:#eebf7f ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: 4.5s linear;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: black;
+}
+
+header .navbar a:hover{
+    color: var(--gold);
+    animation: 0.5s linear;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url("imagenes/fondo (1).png") no-repeat;
+    background-size: cover;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.theory .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.theory .row .img-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.theory .row .img-container img{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.theory .row .img-container h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.theory .row .content{
+    flex: 1 1 40rem;
+}
+
+
+.theory .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.theory .row .content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0 .5rem;
+    line-height: 1.5;
+}
