@@ -6,13 +6,12 @@
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    animation: 4.5s linear;
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     box-sizing: border-box;
 }
+
 
 html{
     font-size: 62.5%;
@@ -20,6 +19,7 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
+
 
 section{
     padding: 2rem 9%;
@@ -119,6 +119,7 @@ header .navbar a:hover{
 .theory .row .content h3{
     font-size: 3rem;
     color: #333;
+    margin-bottom: 0.5%;
 }
 
 .theory .row .content p{
@@ -126,4 +127,29 @@ header .navbar a:hover{
     color: #333;
     padding: 1rem 0 .5rem;
     line-height: 1.5;
+}
+
+.example{
+    margin-bottom: 50px;
+    width: 100%;
+}
+.example h3{
+    font-size: 3rem;
+    margin-bottom: 0.5%;
+}
+
+.example p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0 .5rem;
+    line-height: 1.5;
+    width: 100%;
+    text-align: justify;
+}
+
+.example ol{
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.5;
+    padding: 1rem 0 .5rem 100px;
 }
