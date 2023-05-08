@@ -19,7 +19,7 @@
 
 <header>
 
-    <a href="#home" class="logo">AmigoInversor</a>
+    <a href="#home" class="logo"><h1>AmigoInversor</h1></a>
     <nav class="navbar">
         <a href="#home">Home</a>
     </nav>
@@ -121,11 +121,18 @@
 
         <div class="content">
             <h3>Ahora te toca a vos</h3>
-            <p>Juan invirtió 50.000 pesos en el mercado de valores, que aumentó a 60.000, lo que equivale a una ganancia neta de 10.000 pesos.</p>
+            <p>Juan invirtió 50.000 pesos en el mercado de valores hace un año. Hoy vio que sus acciones aumentaron a 60.000 pesos. </p>
             <p>¿Cuál es su tasa de rendimiento?</p>
 
             <form>
-                <input type="number" placeholder="resultado" class="box" id="respuesta" name="respuesta">
+                <div class="form-container">
+                    <label>Ganancia Neta: </label>
+                    <input type="number" placeholder="resultado" class="box" id="ganancia" name="respuesta">
+                </div>
+                <div class="form-container">
+                    <label>Tasa de rendimiento: </label>
+                    <input type="number" placeholder="resultado" class="box" id="tasa" name="respuesta">
+                </div>
                 <button type="submit" class="btm">Comprobar</button>
 
             </form>

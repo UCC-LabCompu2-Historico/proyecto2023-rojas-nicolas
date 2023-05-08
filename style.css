@@ -1,8 +1,8 @@
-:root{
-    --gold:#eebf7f ;
+:root {
+    --gold: #eebf7f;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -13,7 +13,7 @@
 }
 
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -21,11 +21,11 @@ html{
 }
 
 
-section{
+section {
     padding: 0 9%;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -39,26 +39,26 @@ header{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
-header .logo{
+header .logo h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
     font-weight: bolder;
 }
 
-header .navbar a{
+header .navbar a {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     padding: 0 1.5rem;
     color: black;
 }
 
-header .navbar a:hover{
+header .navbar a:hover {
     color: var(--gold);
     animation: 0.5s linear;
 }
 
-.home{
+.home {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -66,36 +66,36 @@ header .navbar a:hover{
     background-size: contain;
 }
 
-.home .content{
+.home .content {
     max-width: 50rem;
 }
 
-.home .content h3{
+.home .content h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 5rem;
     color: #333;
 }
 
-.home .content p{
+.home .content p {
     font-size: 1.5rem;
     color: black;
     padding: 1rem 0;
     line-height: 1.5;
 }
 
-.theory .row{
+.theory .row {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-.theory .row .img-container{
+.theory .row .img-container {
     flex: 1 1 40rem;
     position: relative;
 }
 
-.theory .row .img-container img{
+.theory .row .img-container img {
     width: 100%;
     border: 1.5rem solid #fff;
     border-radius: .5rem;
@@ -103,37 +103,38 @@ header .navbar a:hover{
     object-fit: cover;
 }
 
-.theory .row .content{
+.theory .row .content {
     flex: 1 1 40rem;
 }
 
 
-.theory .row .content h3{
+.theory .row .content h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
     margin-bottom: 0.5%;
 }
 
-.theory .row .content p{
+.theory .row .content p {
     font-size: 1.5rem;
     color: #333;
     padding: 1rem 0 .5rem;
     line-height: 1.5;
 }
 
-.example{
+.example {
     margin-bottom: 30px;
     width: 100%;
 }
-.example h3{
+
+.example h3 {
     font-family: 'Poppins', sans-serif;
     color: #333;
     font-size: 3rem;
     margin-bottom: 0.5%;
 }
 
-.example p{
+.example p {
     font-size: 1.5rem;
     color: #333;
     padding: 1rem 0 .5rem;
@@ -142,26 +143,26 @@ header .navbar a:hover{
     text-align: justify;
 }
 
-.example ol{
+.example ol {
     font-size: 1.5rem;
     color: #333;
     line-height: 1.5;
     padding: 1rem 0 .5rem 100px;
 }
 
-.exercise .row{
+.exercise .row {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-.exercise .row .img-container{
+.exercise .row .img-container {
     flex: 1 1 40rem;
     position: relative;
 }
 
-.exercise .row .img-container img{
+.exercise .row .img-container img {
     width: 100%;
     border: 1.5rem solid #fff;
     border-radius: .5rem;
@@ -170,19 +171,19 @@ header .navbar a:hover{
 }
 
 
-.exercise .row .content{
+.exercise .row .content {
     flex: 1 1 40rem;
 }
 
 
-.exercise .row .content h3{
+.exercise .row .content h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
     margin-bottom: 0.5%;
 }
 
-.exercise .row .content p{
+.exercise .row .content p {
     font-size: 1.5rem;
     color: #333;
     padding: 1rem 0 .5rem;
@@ -196,24 +197,39 @@ header .navbar a:hover{
     margin-top: 20px;
 }
 
+.exercise .form-container{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.exercise .form-container:last-child{
+    margin-bottom: 0;
+}
+
+.exercise label{
+    font-size: 1.5rem;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.box{
+.box {
     border-radius: 10px;
     border: 1px solid var(--gold);
     text-align: center;
 }
 
-.box::placeholder{
+.box::placeholder {
     font-size: 1.5rem;
     text-align: center;
 }
 
-.exercise .row .content button{
+.exercise .row .content button {
     font-size: 1.5rem;
     padding: 10px 60px;
     background: var(--gold);
@@ -221,8 +237,9 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     border: 0;
     border-radius: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
+
 
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 767px) {
@@ -236,7 +253,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     /* Home */
-
     .home {
         background-image: none;
         background-color: #fff; /* Color de fondo blanco */
@@ -253,8 +269,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     /* Ejemplo */
-
-    .example{
+    .example {
         margin-bottom: 30px;
         margin-top: 60px;
         width: 100%;
