@@ -62,7 +62,7 @@ header .navbar a:hover{
     align-items: center;
     min-height: 100vh;
     background: url("imagenes/fondo (1).png") no-repeat;
-    background-size: cover%;
+    background-size: cover;
 }
 
 .home .content{
