@@ -40,6 +40,7 @@ header{
 }
 
 header .logo{
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
     font-weight: bolder;
@@ -69,7 +70,8 @@ header .navbar a:hover{
 }
 
 .home .content h3{
-    font-size: 6rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
     color: #333;
 }
 
@@ -100,23 +102,13 @@ header .navbar a:hover{
     object-fit: cover;
 }
 
-.theory .row .img-container h3{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    background: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    mix-blend-mode: screen;
-}
-
 .theory .row .content{
     flex: 1 1 40rem;
 }
 
 
 .theory .row .content h3{
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
     margin-bottom: 0.5%;
@@ -130,10 +122,12 @@ header .navbar a:hover{
 }
 
 .example{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 }
 .example h3{
+    font-family: 'Poppins', sans-serif;
+    color: #333;
     font-size: 3rem;
     margin-bottom: 0.5%;
 }
@@ -174,16 +168,6 @@ header .navbar a:hover{
     object-fit: cover;
 }
 
-.exercise .row .img-container h3{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    background: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    mix-blend-mode: screen;
-}
 
 .exercise .row .content{
     flex: 1 1 40rem;
@@ -191,6 +175,7 @@ header .navbar a:hover{
 
 
 .exercise .row .content h3{
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
     margin-bottom: 0.5%;
