@@ -10,8 +10,6 @@ Proyecto primer parcial.
 ### Git Page
 [Aula virtual]:(https://ucc-labcompu2.github.io/proyecto2023-rojas-nicolas/)
 
-:octocat:
-
 ## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
