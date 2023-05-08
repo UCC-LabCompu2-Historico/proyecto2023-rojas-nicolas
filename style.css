@@ -62,7 +62,7 @@ header .navbar a:hover{
     align-items: center;
     min-height: 100vh;
     background: url("imagenes/fondo (1).png") no-repeat;
-    background-size: cover;
+    background-size: cover%;
 }
 
 .home .content{
@@ -221,4 +221,79 @@ input[type=number]::-webkit-outer-spin-button {
     border: 0;
     border-radius: 30px;
     margin-top: 10px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 767px) {
+    /* Header */
+    .navbar {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    /* Home */
+
+    .home {
+        background-image: none;
+        background-color: #fff; /* Color de fondo blanco */
+    }
+
+    .home h3 {
+        font-size: 1rem;
+    }
+
+
+    /* Teoría */
+    .img-container {
+        margin-right: 0;
+    }
+
+    /* Ejemplo */
+
+    .example{
+        margin-bottom: 30px;
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    /* Ejercicio */
+    form {
+        margin-top: 20px;
+    }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media only screen and (min-width: 768px) {
+    /* Header */
+    .navbar {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Home */
+    .content {
+        max-width: 700px;
+    }
+
+    /* Teoría */
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .img-container {
+        margin-right: 40px;
+    }
+
+    /* Ejercicio */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
 }
