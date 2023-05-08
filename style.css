@@ -70,7 +70,7 @@ header .navbar a:hover {
     max-width: 50rem;
 }
 
-.home .content h3 {
+.home .content h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 5rem;
     color: #333;
@@ -108,7 +108,7 @@ header .navbar a:hover {
 }
 
 
-.theory .row .content h3 {
+.theory .row .content h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
@@ -127,7 +127,7 @@ header .navbar a:hover {
     width: 100%;
 }
 
-.example h3 {
+.example h2 {
     font-family: 'Poppins', sans-serif;
     color: #333;
     font-size: 3rem;
@@ -176,7 +176,7 @@ header .navbar a:hover {
 }
 
 
-.exercise .row .content h3 {
+.exercise .row .content h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     color: #333;
@@ -197,18 +197,19 @@ header .navbar a:hover {
     margin-top: 20px;
 }
 
-.exercise .form-container{
+.exercise .form-container {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.exercise .form-container:last-child{
+.exercise .form-container:last-child {
     margin-bottom: 0;
 }
 
-.exercise label{
+.exercise label {
     font-size: 1.5rem;
 }
 

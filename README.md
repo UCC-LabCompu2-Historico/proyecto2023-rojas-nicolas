@@ -1,6 +1,17 @@
 # proyecto2023
 Estructura de Proyecto Lab de Compu II - 2023
 
+## Autores
+- **Rojas**, Nicolás
+
+## Contenido
+Proyecto primer parcial.
+
+### Git Page
+[Aula virtual]:(https://ucc-labcompu2.github.io/proyecto2023-rojas-nicolas/)
+
+:octocat:
+
 ## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
