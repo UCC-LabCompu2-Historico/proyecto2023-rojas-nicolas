@@ -22,7 +22,7 @@ html{
 
 
 section{
-    padding: 2rem 9%;
+    padding: 0px 9%;
 }
 
 header{
@@ -130,7 +130,7 @@ header .navbar a:hover{
 }
 
 .example{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 100%;
 }
 .example h3{
@@ -152,4 +152,88 @@ header .navbar a:hover{
     color: #333;
     line-height: 1.5;
     padding: 1rem 0 .5rem 100px;
+}
+
+.exercise .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.exercise .row .img-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.exercise .row .img-container img{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exercise .row .img-container h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.exercise .row .content{
+    flex: 1 1 40rem;
+}
+
+
+.exercise .row .content h3{
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.5%;
+}
+
+.exercise .row .content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0 .5rem;
+    line-height: 1.5;
+}
+
+.exercise .row .content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.box{
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+    text-align: center;
+}
+
+.box::placeholder{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.exercise .row .content button{
+    font-size: 1.5rem;
+    padding: 10px 60px;
+    background: var(--gold);
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 30px;
+    margin-top: 10px;
 }
