@@ -28,7 +28,7 @@ openModal.addEventListener('click', function (e) {
     const gananciaValor = parseFloat(ganancia.value.replace(/[,.]/g, ''));
     const tasaValor = parseFloat(tasa.value);
 
-    if (isNaN(gananciaValor) || isNaN(tasaValor)) {
+    if (isNaN(gananciaValor) || isNaN(tasaValor) || ganancia.value !== gananciaValor.toString() || tasa.value !== tasaValor.toString()) {
         alert('El valor ingresado es incorrecto');
         ganancia.value = '';
         tasa.value = '';
