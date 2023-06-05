@@ -25,41 +25,40 @@ const tasa = document.getElementById('tasa');
 openModal.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const gananciaValor = parseFloat(ganancia.value.replace(/[,.]/g, ''));
-    const tasaValor = parseFloat(tasa.value);
+    let gananciaValor = ganancia.value.replace(/[,$.]/g, '');
+    let tasaValor = tasa.value.replace(/[,$]/g, '');
 
-    if (isNaN(gananciaValor) || isNaN(tasaValor) || ganancia.value !== gananciaValor.toString() || tasa.value !== tasaValor.toString()) {
+    if (tasa.value.endsWith('%')) {
+        tasaValor = tasaValor.slice(0, -1); // Eliminar el símbolo "%"
+    }
+
+    if (gananciaValor === '' || tasaValor === '') {
+        alert('Por favor, rellena ambos campos');
+        return;
+    }
+
+    if (
+        isNaN(gananciaValor) ||
+        isNaN(tasaValor) ||
+        parseFloat(gananciaValor) !== 10000 ||
+        parseFloat(tasaValor) !== 20
+    ) {
         alert('El valor ingresado es incorrecto');
         ganancia.value = '';
         tasa.value = '';
     } else {
-        if (gananciaValor === 10000 && tasaValor === 20) {
-            modalBien.classList.add('modal_show');
-            document.body.style.overflow = 'hidden';
-            header.style.display = 'none';
-            const canvas = document.getElementById('myCanvasBien');
-            const context = canvas.getContext('2d');
-            context.strokeStyle = 'green';
-            context.lineWidth = 4;
-            context.font = '100px Arial';
-            const symbol = '✔️';
-            const textWidth = context.measureText(symbol).width;
-            const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-            context.fillText(symbol, x, 150);
-        } else {
-            modalMal.classList.add('modal_show');
-            document.body.style.overflow = 'hidden';
-            header.style.display = 'none';
-            const canvas = document.getElementById('myCanvasMal');
-            const context = canvas.getContext('2d');
-            context.strokeStyle = 'red';
-            context.lineWidth = 4;
-            context.font = '100px Arial';
-            const symbol = '❌';
-            const textWidth = context.measureText(symbol).width;
-            const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-            context.fillText(symbol, x, 150);
-        }
+        modalBien.classList.add('modal_show');
+        document.body.style.overflow = 'hidden';
+        header.style.display = 'none';
+        const canvas = document.getElementById('myCanvasBien');
+        const context = canvas.getContext('2d');
+        context.strokeStyle = 'green';
+        context.lineWidth = 4;
+        context.font = '100px Arial';
+        const symbol = '✔️';
+        const textWidth = context.measureText(symbol).width;
+        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+        context.fillText(symbol, x, 150);
     }
 });
 
@@ -72,3 +71,4 @@ closeModal.forEach(function (closeBtn) {
         document.body.style.overflow = 'auto';
     });
 });
+
