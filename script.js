@@ -47,10 +47,29 @@ openModal.addEventListener('click', function (e) {
         modalBien.classList.add('modal_show');
         document.body.style.overflow = 'hidden';
         header.style.display = 'none';
+        const canvas = document.getElementById('myCanvasBien');
+        const context = canvas.getContext('2d');
+        context.strokeStyle = 'green';
+        context.lineWidth = 4;
+        context.font = '100px Arial';
+        const symbol = '✔️';
+        const textWidth = context.measureText(symbol).width;
+        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+        context.fillText(symbol, x, 150);
+
     } else {
         modalMal.classList.add('modal_show');
         document.body.style.overflow = 'hidden';
         header.style.display = 'none';
+        const canvas = document.getElementById('myCanvasMal');
+        const context = canvas.getContext('2d');
+        context.strokeStyle = 'red';
+        context.lineWidth = 4;
+        context.font = '100px Arial';
+        const symbol = '❌';
+        const textWidth = context.measureText(symbol).width;
+        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+        context.fillText(symbol, x, 150);
     }
 });
 
