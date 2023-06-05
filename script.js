@@ -26,39 +26,48 @@ openModal.addEventListener('click', function (e) {
     e.preventDefault();
 
     let gananciaValor = ganancia.value.replace(/[,$.]/g, '');
-    let tasaValor = tasa.value.replace(/[,$]/g, '');
-
-    if (tasa.value.endsWith('%')) {
-        tasaValor = tasaValor.slice(0, -1); // Eliminar el símbolo "%"
-    }
+    let tasaValor = tasa.value.replace(/[,%]/g, '');
 
     if (gananciaValor === '' || tasaValor === '') {
         alert('Por favor, rellena ambos campos');
         return;
     }
 
-    if (
-        isNaN(gananciaValor) ||
-        isNaN(tasaValor) ||
-        parseFloat(gananciaValor) !== 10000 ||
-        parseFloat(tasaValor) !== 20
-    ) {
+    if (isNaN(gananciaValor) || isNaN(tasaValor)) {
         alert('El valor ingresado es incorrecto');
         ganancia.value = '';
         tasa.value = '';
     } else {
-        modalBien.classList.add('modal_show');
-        document.body.style.overflow = 'hidden';
-        header.style.display = 'none';
-        const canvas = document.getElementById('myCanvasBien');
-        const context = canvas.getContext('2d');
-        context.strokeStyle = 'green';
-        context.lineWidth = 4;
-        context.font = '100px Arial';
-        const symbol = '✔️';
-        const textWidth = context.measureText(symbol).width;
-        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-        context.fillText(symbol, x, 150);
+        gananciaValor = parseFloat(gananciaValor);
+        tasaValor = parseFloat(tasaValor);
+
+        if ((gananciaValor === 10000 || ganancia.value === '$10,000') && (tasaValor === 20 || tasa.value === '20%')) {
+            modalBien.classList.add('modal_show');
+            document.body.style.overflow = 'hidden';
+            header.style.display = 'none';
+            const canvas = document.getElementById('myCanvasBien');
+            const context = canvas.getContext('2d');
+            context.strokeStyle = 'green';
+            context.lineWidth = 4;
+            context.font = '100px Arial';
+            const symbol = '✔️';
+            const textWidth = context.measureText(symbol).width;
+            const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+            context.fillText(symbol, x, 150);
+        } else {
+            modalMal.classList.add('modal_show');
+            document.body.style.overflow = 'hidden';
+            header.style.display = 'none';
+            const canvas = document.getElementById('myCanvasMal');
+            const context = canvas.getContext('2d');
+            context.strokeStyle = 'red';
+            context.lineWidth = 4;
+            context.font = '100px Arial';
+            const symbol = '❌';
+            const textWidth = context.measureText(symbol).width;
+            const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+            context.fillText(symbol, x, 150);
+        }
     }
 });
 
