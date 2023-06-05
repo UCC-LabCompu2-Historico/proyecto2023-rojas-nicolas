@@ -245,6 +245,75 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 20px;
 }
 
+/* Inicio Ventana Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s .8s;
+}
+
+.modal_show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+}
+
+.modal_container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modal_title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+}
+
+.modal_paragraph{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.modal_close{
+    text-decoration: none;
+    color: white;
+    background-color: var(--gold);
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal_close:hover{
+    color: var(--gold);
+    background-color: white;
+}
+
+/* Fin Ventana Modal*/
+
 
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 767px) {

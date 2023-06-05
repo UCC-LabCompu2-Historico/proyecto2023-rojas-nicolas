@@ -129,20 +129,21 @@
                 60.000 pesos. </p>
             <p>¿Cuál es su tasa de rendimiento?</p>
 
-            <form>
+            <form name="datos">
                 <div class="form-container">
                     <label for="ganancia">Ganancia Neta: </label>
-                    <input type="number" placeholder="resultado" class="box" id="ganancia" name="respuesta">
+                    <input type="text" placeholder="resultado" class="box" id="ganancia" name="respuesta" name="ganancia" onchange="verificarInput(this.id, this.value)">
                 </div>
                 <div class="form-container">
                     <label for="tasa">Tasa de rendimiento: </label>
-                    <input type="number" placeholder="resultado" class="box" id="tasa" name="respuesta">
+                    <input type="text" placeholder="resultado" class="box" id="tasa" name="respuesta" name="tasa" onchange="verificarInput(this.id, this.value)">
                 </div>
-                <button type="submit" class="btm">Comprobar</button>
+
+                <button id="open" type="submit" class="btm">
+                    Comprobar
+                </button>
 
             </form>
-
-            <canvas></canvas> <!-- a implementar en futura popup-->
 
         </div>
 
@@ -150,8 +151,31 @@
 
 </section>
 
-
 <!-- exercise section ends -->
+
+<!-- modal section stars -->
+
+<!--
+<section class="modal">
+    <div class="modal_container">
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+        <h2 class="modal_title">¡Correcto!</h2>
+        <p class="modal_paragraph">¡Muy bien hecho, felicidades!</p>
+        <a href="#" class="modal_close" >X</a>
+    </div>
+</section>
+-->
+
+<section class="modal">
+    <div class="modal_container">
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+        <h2 class="modal_title">¡Casi...!</h2>
+        <p class="modal_paragraph">¿Por qué no lo intentas de nuevo?</p>
+        <a href="#" class="modal_close" >X</a>
+    </div>
+</section>
+
+<!-- modal section ends -->
 
 </body>
 </html>
