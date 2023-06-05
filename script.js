@@ -15,22 +15,6 @@ window.addEventListener('scroll', () => {
  * @param {number} valor - Contiene el valor del input que ingreso el usuario
  */
 
-verificarInput = (id, valor) => {
-
-    let ganancia, tasa;
-
-    if(valor.includes(",")){
-        valor = valor.replace(",",".");
-    }
-
-    if(isNaN(valor)){
-        alert("El valor ingresado es incorrecto");
-        ganancia = " ";
-        tasa = " ";
-    }
-}
-
-
 const openModal = document.getElementById('open');
 const modalBien = document.querySelector('.modalBien');
 const modalMal = document.querySelector('.modalMal');
@@ -40,36 +24,42 @@ const tasa = document.getElementById('tasa');
 
 openModal.addEventListener('click', function (e) {
     e.preventDefault();
-    const gananciaValor = parseFloat(ganancia.value);
+
+    const gananciaValor = parseFloat(ganancia.value.replace(/[,.]/g, ''));
     const tasaValor = parseFloat(tasa.value);
 
-    if (gananciaValor === 10000 && tasaValor === 20) {
-        modalBien.classList.add('modal_show');
-        document.body.style.overflow = 'hidden';
-        header.style.display = 'none';
-        const canvas = document.getElementById('myCanvasBien');
-        const context = canvas.getContext('2d');
-        context.strokeStyle = 'green';
-        context.lineWidth = 4;
-        context.font = '100px Arial';
-        const symbol = '✔️';
-        const textWidth = context.measureText(symbol).width;
-        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-        context.fillText(symbol, x, 150);
-
+    if (isNaN(gananciaValor) || isNaN(tasaValor)) {
+        alert('El valor ingresado es incorrecto');
+        ganancia.value = '';
+        tasa.value = '';
     } else {
-        modalMal.classList.add('modal_show');
-        document.body.style.overflow = 'hidden';
-        header.style.display = 'none';
-        const canvas = document.getElementById('myCanvasMal');
-        const context = canvas.getContext('2d');
-        context.strokeStyle = 'red';
-        context.lineWidth = 4;
-        context.font = '100px Arial';
-        const symbol = '❌';
-        const textWidth = context.measureText(symbol).width;
-        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-        context.fillText(symbol, x, 150);
+        if (gananciaValor === 10000 && tasaValor === 20) {
+            modalBien.classList.add('modal_show');
+            document.body.style.overflow = 'hidden';
+            header.style.display = 'none';
+            const canvas = document.getElementById('myCanvasBien');
+            const context = canvas.getContext('2d');
+            context.strokeStyle = 'green';
+            context.lineWidth = 4;
+            context.font = '100px Arial';
+            const symbol = '✔️';
+            const textWidth = context.measureText(symbol).width;
+            const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+            context.fillText(symbol, x, 150);
+        } else {
+            modalMal.classList.add('modal_show');
+            document.body.style.overflow = 'hidden';
+            header.style.display = 'none';
+            const canvas = document.getElementById('myCanvasMal');
+            const context = canvas.getContext('2d');
+            context.strokeStyle = 'red';
+            context.lineWidth = 4;
+            context.font = '100px Arial';
+            const symbol = '❌';
+            const textWidth = context.measureText(symbol).width;
+            const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+            context.fillText(symbol, x, 150);
+        }
     }
 });
 
@@ -82,6 +72,3 @@ closeModal.forEach(function (closeBtn) {
         document.body.style.overflow = 'auto';
     });
 });
-
-
-
