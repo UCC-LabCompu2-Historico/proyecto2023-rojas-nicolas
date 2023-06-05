@@ -52,7 +52,7 @@ header .navbar a {
     color: black;
 }
 
-header .navbar a:hover {
+#navbar a:hover {
     color: var(--gold);
     animation: 0.5s linear;
 }
