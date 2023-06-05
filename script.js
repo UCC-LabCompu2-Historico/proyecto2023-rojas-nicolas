@@ -31,49 +31,38 @@ verificarInput = (id, valor) => {
 }
 
 
-const openModal = document.querySelector('.btm');
-const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.modal_close');
-openModal.addEventListener('click', (e) => {
+const openModal = document.getElementById('open');
+const modalBien = document.querySelector('.modalBien');
+const modalMal = document.querySelector('.modalMal');
+const closeModal = document.querySelectorAll('.modal_close');
+const ganancia = document.getElementById('ganancia');
+const tasa = document.getElementById('tasa');
+
+openModal.addEventListener('click', function (e) {
     e.preventDefault();
-    modal.classList.add('modal_show');
-    header.style.display = 'none';
+    const gananciaValor = parseFloat(ganancia.value);
+    const tasaValor = parseFloat(tasa.value);
+
+    if (gananciaValor === 10000 && tasaValor === 20) {
+        modalBien.classList.add('modal_show');
+        document.body.style.overflow = 'hidden';
+        header.style.display = 'none';
+    } else {
+        modalMal.classList.add('modal_show');
+        document.body.style.overflow = 'hidden';
+        header.style.display = 'none';
+    }
 });
 
-
-closeModal.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('modal_show');
-    header.style.display = 'flex';
+closeModal.forEach(function (closeBtn) {
+    closeBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalBien.classList.remove('modal_show');
+        modalMal.classList.remove('modal_show');
+        header.style.display = 'flex';
+        document.body.style.overflow = 'auto';
+    });
 });
 
-const canvas = document.getElementById('myCanvas');
-const context = canvas.getContext('2d');
-
-// Canvas BIEN
-
-// Establecer el color de dibujo en verde
-/*
-context.strokeStyle = 'green';
-
-// Dibujar el tic
-context.font = '100px Arial';
-const symbol = '✔️';
-const textWidth = context.measureText(symbol).width;
-const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-const y = canvas.height / 2; // Centrado vertical
-context.fillText(symbol, x, 150);
-*/
-// Canvas MAL
-
-context.strokeStyle = 'red';
-
-// Dibujar el tic
-context.font = '100px Arial';
-const symbol = '❌';
-const textWidth = context.measureText(symbol).width;
-const x = (canvas.width - textWidth) / 2; // Centrado horizontal
-const y = canvas.height / 2; // Centrado vertical
-context.fillText(symbol, x, 150);
 
 

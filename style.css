@@ -247,7 +247,22 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Inicio Ventana Modal */
 
-.modal {
+.modalBien {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s .8s;
+}
+
+.modalMal {
     position: fixed;
     top: 0;
     left: 0;
