@@ -1,5 +1,16 @@
 const header = document.querySelector('.header');
+const openModal = document.getElementById('open');
+const modalBien = document.querySelector('.modalBien');
+const modalMal = document.querySelector('.modalMal');
+const closeModal = document.querySelectorAll('.modal_close');
+const ganancia = document.getElementById('ganancia');
+const tasa = document.getElementById('tasa');
 
+/**
+ * Realiza las acciones necesarias cuando se produce el evento 'scroll' en la ventana.
+ * @method scrollEventHandler
+ * @param {Event} event - El objeto del evento 'scroll'
+ */
 window.addEventListener('scroll', () => {
     if(window.scrollY > 100){
         header.classList.add('header-scrolled');
@@ -9,18 +20,11 @@ window.addEventListener('scroll', () => {
 })
 
 /**
- * Verifica que los datos ingresados sean los correctos.
- * @method verificarInput
- * @param {string} id - Id del elemento input del html;
+ * Verifica que los datos ingresados sean los correctos y muestra la ventana modal correspondiente.
+ * @method openModal (funcion anonima)
+ * @param {Event} e - El objeto del evento 'click';
  * @param {number} valor - Contiene el valor del input que ingreso el usuario
  */
-
-const openModal = document.getElementById('open');
-const modalBien = document.querySelector('.modalBien');
-const modalMal = document.querySelector('.modalMal');
-const closeModal = document.querySelectorAll('.modal_close');
-const ganancia = document.getElementById('ganancia');
-const tasa = document.getElementById('tasa');
 
 openModal.addEventListener('click', function (e) {
     e.preventDefault();
