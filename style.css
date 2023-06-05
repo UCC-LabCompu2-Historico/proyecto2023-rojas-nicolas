@@ -30,13 +30,12 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: #fff;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: all 0.5s;
 }
 
 header .logo h1 {
@@ -56,6 +55,11 @@ header .navbar a {
 header .navbar a:hover {
     color: var(--gold);
     animation: 0.5s linear;
+}
+
+.header-scrolled {
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
 .home {
