@@ -5,10 +5,9 @@ Estructura de Proyecto Lab de Compu II - 2023
 - **Rojas**, Nicolás
 
 ## Contenido
-Proyecto primer parcial.
+Proyecto final Lab Compu II. Temática: Tasa de Rendimiento.
 
-### Git Page
-[Aula virtual]:(https://ucc-labcompu2.github.io/proyecto2023-rojas-nicolas/)
+### Git Page: https://ucc-labcompu2.github.io/proyecto2023-rojas-nicolas/
 
 ## Requisitos del Primer Parcial
 

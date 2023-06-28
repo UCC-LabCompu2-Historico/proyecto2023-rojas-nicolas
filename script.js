@@ -1,6 +1,7 @@
 const header = document.querySelector('.header');
 const openModal = document.getElementById('open');
 const modalBien = document.querySelector('.modalBien');
+const modalDatos = document.querySelector('.modalDatos');
 const modalMal = document.querySelector('.modalMal');
 const closeModal = document.querySelectorAll('.modal_close');
 const ganancia = document.getElementById('ganancia');
@@ -38,7 +39,18 @@ openModal.addEventListener('click', function (e) {
     }
 
     if (isNaN(gananciaValor) || isNaN(tasaValor)) {
-        alert('El valor ingresado es incorrecto');
+        modalDatos.classList.add('modal_show');
+        document.body.style.overflow = 'hidden';
+        header.style.display = 'none';
+        const canvas = document.getElementById('myCanvasDatos');
+        const context = canvas.getContext('2d');
+        context.strokeStyle = 'red';
+        context.lineWidth = 4;
+        context.font = '100px Arial';
+        const symbol = '❌';
+        const textWidth = context.measureText(symbol).width;
+        const x = (canvas.width - textWidth) / 2; // Centrado horizontal
+        context.fillText(symbol, x, 150);
         ganancia.value = '';
         tasa.value = '';
     } else {
@@ -71,6 +83,8 @@ openModal.addEventListener('click', function (e) {
             const textWidth = context.measureText(symbol).width;
             const x = (canvas.width - textWidth) / 2; // Centrado horizontal
             context.fillText(symbol, x, 150);
+            ganancia.value = '';
+            tasa.value = '';
         }
     }
 });
@@ -80,6 +94,7 @@ closeModal.forEach(function (closeBtn) {
         e.preventDefault();
         modalBien.classList.remove('modal_show');
         modalMal.classList.remove('modal_show');
+        modalDatos.classList.remove('modal_show');
         header.style.display = 'flex';
         document.body.style.overflow = 'auto';
     });
